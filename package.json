@@ -11,11 +11,14 @@
     "test": "npm run jshint && npm run jscs && istanbul cover _mocha test/unit/ test/integration -- -R spec"
   },
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "~1.15.1",
     "cookie-parser": "~1.4.3",
+    "crypto": "0.0.3",
     "debug": "~2.2.0",
     "dotenv": "^2.0.0",
     "express": "~4.13.4",
+    "mongoose": "^4.5.8",
     "morgan": "~1.7.0",
     "pug": "^2.0.0-beta3",
     "serve-favicon": "~2.3.0"
