@@ -7,11 +7,20 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+mongoose.connect(process.env.MONGODB_URI);
+mongoose.connection.on('error', function() {
+  console.log(
+    'MongoDB Connection Error. Please make sure that MongoDB is running.'
+  );
+  process.exit(1);
+});
 
 // View engine setup
 app.set('views', path.join(__dirname, 'views'));
