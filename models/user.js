@@ -27,6 +27,24 @@ var userSchema = new mongoose.Schema({
   passwordResetExpires: Date,
 }, schemaOptions);
 
+userSchema.statics.isAdmin = function isAdmin(req, res, next) {
+  if (req.isAuthenticated() && req.user.admin) {
+    return next();
+  }
+
+  res.redirect('/sign-in');
+};
+
+userSchema.statics.isOwn = function isLinguist(req, res, next) {
+  if (req.isAuthenticated() &&
+    (req.user.admin || req.user._id === req.params.id)) {
+    return next();
+  }
+
+  res.redirect('/sign-in');
+};
+
+
 var User = mongoose.model('User', userSchema);
 
 module.exports = User;
