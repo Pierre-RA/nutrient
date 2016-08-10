@@ -8,4 +8,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/sign-in', function(req, res, next) {
+  res.render('sign-in');
+});
+
 module.exports = router;
