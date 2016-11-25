@@ -3,6 +3,8 @@ Nutrient
 
 An [anthillsolutions'](www.anthillsolutions.ch) summer web project.
 
+This project is now dicontinued.
+
 Installation
 ------------
 
