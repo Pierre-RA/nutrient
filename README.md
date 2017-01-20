@@ -4,6 +4,7 @@ Nutrient
 An [anthillsolutions'](www.anthillsolutions.ch) summer web project.
 
 This project is now dicontinued.
+It is now revived at: https://github.com/anthillsolutions/nutrient
 
 Installation
 ------------
